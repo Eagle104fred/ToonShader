@@ -33,7 +33,7 @@ Shader "Custom/ShadowRecieve"
         struct v2f
         {
             float2 uv:TEXCOORD0;
-            UNITY_FOG_COORDS(1)
+            UNITY_FOG_COORDS(3)
             float4 vertex : SV_POSITION;
             float4 shadowPos:TEXCOORD1;
             float3 normal:TEXCOORD2;
@@ -61,6 +61,7 @@ Shader "Custom/ShadowRecieve"
         
         float2 poissonDisk[NUM_SAMPLES];
 
+        /////////Function///////////
         float rand_2to1(float2 uv )
         { 
           // 0 - 1
